@@ -70,7 +70,7 @@ main {
     z-index: 100;
     box-sizing: border-box;
     border-radius: 5px;
-    opacity: 0; /* Added fade effect */
+    opacity: 0;
     transition: opacity 0.3s ease;
 }
 header {
@@ -81,7 +81,6 @@ header {
     align-items: center;
     justify-content:center;
 }
-
 header.dark-mode {
     background-color: #333;
 }
@@ -151,10 +150,7 @@ footer.dark-mode {
 .stils:hover {
     box-shadow: 0 10px 16px 0 rgb(0, 0, 0);
 }
-.stils:hover .info-overlay {
-    display: block;
-    opacity: 1;
-}  
+
 .informacija {
     padding: 2px 20px;
     text-align: center;
@@ -257,4 +253,77 @@ input:checked + .slider:before {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+/* Base styles remain the same */
+
+@media only screen and (max-width: 700px) {
+    body {
+        display: flexbox;
+        margin: auto;
+        padding: auto;
+    }
+    header {
+        flex-direction: row;
+        text-align: center;
+        padding: 10px;
+    }
+
+    header img {
+        margin: 0 auto;
+        width: 80px;
+        height: 80px;
+    }
+
+    .header-text {
+        flex-direction: column;
+    }
+
+    .header-text h1 {
+        font-size: 24px;
+    }
+
+    .header-text a {
+        display: block;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    aside {
+        display: none;
+    }
+    main {
+        margin-left: 0;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .stils {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .stils img {
+        width: 100%;
+        height: auto;
+    }
+    .button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+    .dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        width: 100%;
+        left: 0;
+    }
 }
